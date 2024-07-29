@@ -103,6 +103,8 @@ const Content = styled.div`
     font-weight: 900;
     margin-bottom: 20px;
   }
+
+
 `;
 
 const Projects = styled.div`
@@ -129,6 +131,8 @@ const Box = styled.div`
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+
+
 `;
 
 const Img = styled.div`
@@ -177,7 +181,12 @@ const Img = styled.div`
       bottom: 0%;
     }
   }
+  @media screen and (max-width: 450px) {
+    width: 300px;
+  }
+
 `;
+
 
 const Btn = styled.div`
   padding: 15px;

@@ -20,7 +20,7 @@ const Contact = () => {
       <Content>
         <h4>How can you communicate?</h4>
         <h1>Contact Me</h1>
-        <img src="./images/contact.png" alt="contact form" />
+        
         <Reach>
           <Links 
             onMouseEnter={() => setHovered(true)}
@@ -74,17 +74,7 @@ const Content = styled.div`
     font-weight: 900;
     margin-bottom: 20px;
   }
-  img {
-    width: 400px;
-    height: 400px;
-  }
 
-  @media screen and (max-width: 400px) {
-    img{
-      width: 300px;
-      height: 300px;
-    }
-  }
 `;
 
 const Reach = styled.div`
@@ -101,8 +91,8 @@ const Links = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 30px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border: 2px solid #6c757d;
   border-radius: 10px;
   transition: 0.3s ease;
@@ -113,7 +103,7 @@ const Links = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 40px;
     color: #6c757d;
   }
 
@@ -123,6 +113,15 @@ const Links = styled.div`
 
     a {
       color: #fff;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 50px;
+    height: 50px;
+    a{
+    font-size: 25px;
+
     }
   }
 `;
@@ -136,6 +135,9 @@ const EmailText = styled.span`
   border-radius: 5px;
   font-size: 16px;
   white-space: nowrap;
+@media screen and (max-width: 500px) {
+  margin-left: 150px;
+}
 `;
 
 const Message = styled.div`

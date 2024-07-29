@@ -8,16 +8,17 @@ const Footer = () => {
             <p>Copyright &copy; 2024 by Ankit Jodhani | All Rights Reserved.</p>
         </Copy>
         <SocialLinks>
-            <a href="">
+            <a href="https://github.com/AnkitJodhani" target='_blank'>
             <i class='bx bxl-github'></i>
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/ankit-jodhani/" target='_blank'>
             <i class='bx bxl-linkedin-square' ></i>
             </a>
-            <a href="">
+            <a href="https://twitter.com/Ankit__Jodhani" target='_blank'>
             <i class='bx bxl-twitter' ></i>
             </a>
         </SocialLinks>
+        
       </Content>
     </Container>
   );
