@@ -15,7 +15,7 @@ const Project = () => {
               </div>
             </Img>
             <Btn>
-              <a href="#">
+              <a href="https://github.com/AnkitJodhani" target="_blank">
                 <i class="bx bxl-github"></i>
               </a>
               <a href="#">
@@ -31,7 +31,7 @@ const Project = () => {
               </div>
             </Img>
             <Btn>
-              <a href="#">
+              <a href="https://github.com/AnkitJodhani" target="_blank">
                 <i class="bx bxl-github"></i>
               </a>
               <a href="#">
@@ -47,7 +47,7 @@ const Project = () => {
               </div>
             </Img>
             <Btn>
-              <a href="#">
+              <a href="https://github.com/AnkitJodhani" target="_blank">
                 <i class="bx bxl-github"></i>
               </a>
               <a href="#">
@@ -63,7 +63,7 @@ const Project = () => {
               </div>
             </Img>
             <Btn>
-              <a href="#">
+              <a href="https://github.com/AnkitJodhani" target="_blank">
                 <i class="bx bxl-github"></i>
               </a>
               <a href="#">
