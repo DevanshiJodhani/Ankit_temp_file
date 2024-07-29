@@ -13,11 +13,11 @@ const Home = () => {
             I am Ankit  <br />Jodhani
           </h1>
           <p>FRONTEND WEB <br />DESIGNER</p>
-          <a href="#">Visit My Works</a>
+          <a href="#project">Visit My Works</a>
         </Info>
       </Content>
       <About />
-      {/* <Project /> */}
+      <Project />
       <Contact />
     </Container>
   );
