@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import About from './About';
 import Contact from './Contact';
 import Project from './Project';
-import Blog from './Blog';
 
 const Home = () => {
   return (
@@ -19,7 +18,6 @@ const Home = () => {
       </Content>
       <About />
       {/* <Project /> */}
-      <Blog />
       <Contact />
     </Container>
   );
@@ -32,13 +30,20 @@ const Container = styled.div`
 const Content = styled.div`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(7, 123, 255, 0) 70%,
+        rgba(255, 255, 255, 0.99) 100%
+      ),
+      url('./images/home/spot-lights-background-concept_23-2148639919.avif');
+    /* background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 0%,
       rgba(7, 123, 255, 0) 70%,
       rgba(255, 255, 255, 0.99) 100%
     ),
-    url('./images/home/home_bg_2.jpeg');
+    url('./images/home/home_bg_2.jpeg'); */
   background-position: center top;
   background-size: cover;
   display: flex;

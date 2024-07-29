@@ -49,7 +49,7 @@ const Header = () => {
               <a href="#project" onClick={closeMenu}>
                 Project
               </a>
-              <a href="#blog" onClick={closeMenu}>
+              <a href="https://blog.ankitjodhani.com/" target='_blank' onClick={closeMenu}>
                 Blog
               </a>
               <a href="#contact" onClick={closeMenu}>

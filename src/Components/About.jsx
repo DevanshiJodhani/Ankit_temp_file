@@ -1,27 +1,33 @@
 import styled from 'styled-components';
 
 const About = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resume_ankit_jodhani.pdf'; 
+    link.download = 'Ankit_Jodhani_Resume.pdf'; 
+    link.click();
+  };
+
   return (
     <Container id="about">
       <Content>
         <Left>
-          <img src="./images/about_man.png" alt="" />
+          <img src="./images/about_men.jpg" alt="About me" />
         </Left>
         <Right>
-          <h4>Who Am I ?</h4>
+          <h4>Who Am I?</h4>
           <h1>About Me</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae aliquid ad provident aut fuga animi soluta quae eos non
-            cupiditate voluptates dolorem, doloremque quos dicta quibusdam
-            impedit iure nemo a iste <br /> culpa! Quasi quibusdam hic
-            recusandae delectus velit officiis explicabo voluptatibus! Nemo esse
-            similique, voluptates labore distinctio, placeat explicabo facilis
-            molestias, blanditiis culpa iusto voluptatem ratione eligendi a,
-            quia temporibus velit vero ipsa sint ex voluptatum expedita aliquid!
-            Debitis, nam!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+            aliquid ad provident aut fuga animi soluta quae eos non cupiditate
+            voluptates dolorem, doloremque quos dicta quibusdam impedit iure nemo
+            a iste culpa! Quasi quibusdam hic recusandae delectus velit officiis
+            explicabo voluptatibus! Nemo esse similique, voluptates labore
+            distinctio, placeat explicabo facilis molestias, blanditiis culpa
+            iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa
+            sint ex voluptatum expedita aliquid! Debitis, nam!
           </p>
-          <button>Download CV</button>
+          <button onClick={handleDownload}>Download CV</button>
         </Right>
       </Content>
     </Container>
@@ -59,9 +65,15 @@ const Content = styled.div`
 const Left = styled.div`
   max-width: 40%;
   width: 100%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
   img {
     width: 400px;
     height: 400px;
+    object-fit: cover;
+    object-position: center;
   }
 
   @media screen and (max-width: 768px) {
@@ -87,16 +99,19 @@ const Right = styled.div`
   max-width: 60%;
   width: 100%;
   margin-top: 20px;
+
   h4 {
     color: #444444;
     margin-bottom: 12px;
   }
+
   h1 {
     font-size: 40px;
     color: #695aa6;
     font-weight: 900;
     margin-bottom: 20px;
   }
+
   p {
     line-height: 1.4;
     color: #111;
@@ -104,6 +119,7 @@ const Right = styled.div`
     letter-spacing: 1px;
     margin-bottom: 50px;
   }
+
   button {
     padding: 12px 30px;
     background: transparent;

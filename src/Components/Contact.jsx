@@ -1,25 +1,48 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Contact = () => {
+  const [hovered, setHovered] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const email = 'ankitjodhani1903@gmail.com';
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setMessage('Email copied!');
+    setTimeout(() => {
+      setMessage('');
+    }, 2000);
+  };
+
   return (
     <Container id="contact">
       <Content>
         <h4>How can you communicate?</h4>
         <h1>Contact Me</h1>
-        <Form>
-          <InputField>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Enter Email" />
-          </InputField>
-          <TextareaField>
-            <textarea
-              name="message"
-              placeholder="Write Something"
-              rows={8}
-            ></textarea>
-          </TextareaField>
-          <button>Send Message</button>
-        </Form>
+        <img src="./images/contact.png" alt="contact form" />
+        <Reach>
+          <Links 
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={copyEmail}
+          >
+            <a href="#" onClick={(e) => e.preventDefault()}>
+              <i className='bx bx-envelope'></i>
+            </a>
+            {hovered && <EmailText>{email}</EmailText>}
+          </Links>
+          <Links>
+            <a href="https://www.linkedin.com/in/ankit-jodhani/" target='_blank'><i className='bx bxl-linkedin-square' ></i></a>
+          </Links>
+          <Links>
+            <a href="https://twitter.com/Ankit__Jodhani" target='_blank'><i className='bx bxl-github' ></i></a>
+          </Links>
+          <Links>
+            <a href="https://github.com/AnkitJodhani" target='_blank'><i className='bx bxl-twitter' ></i></a>
+          </Links>
+        </Reach>
+        {message && <Message>{message}</Message>}
       </Content>
     </Container>
   );
@@ -32,7 +55,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
   margin: auto;
@@ -51,69 +74,76 @@ const Content = styled.div`
     font-weight: 900;
     margin-bottom: 20px;
   }
+  img {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 400px) {
+    img{
+      width: 300px;
+      height: 300px;
+    }
+  }
 `;
 
-const Form = styled.form`
-  width: 100%;
+const Reach = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-top: 25px;
+`;
+
+const Links = styled.div`
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #6c757d;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
 
-  button {
-    margin-top: 20px;
-    padding: 16px 30px;
-    outline: none;
-    border: 1px solid #695aa6;
-    border-radius: 12px;
-    background: transparent;
-    font-size: 16px;
-    color: #695aa6;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.5s ease;
-    &:hover {
-      background: #695aa6;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6c757d;
+  }
+
+  &:hover {
+    background: #695aa6;
+    border: none;
+
+    a {
       color: #fff;
     }
   }
-
 `;
 
-const InputField = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-  height: 50px;
-  margin-bottom: 20px;
-  input {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 500px){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-  }
+const EmailText = styled.span`
+  position: absolute;
+  top: -50px;
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap;
 `;
 
-const TextareaField = styled.div`
-  width: 100%;
-  height: 100%;
+const Message = styled.div`
+  margin-top: 12px;
+  color: #008000;
+  padding: 10px;
+  background-color: #f5f5f5;
 
-  textarea {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
 `;
 
 export default Contact;
