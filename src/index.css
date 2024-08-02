@@ -1,11 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  font-family: 'Times New Roman';
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
   -webkit-tap-highlight-color: transparent;
 }
-body{
+body {
   background-color: #fff;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -16,13 +19,12 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-
-.menu-btn i{
+.menu-btn i {
   color: #fff;
   font-size: 35px;
   cursor: pointer;
@@ -33,12 +35,12 @@ html{
   display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .menu-btn .bx-x {
     display: none;
   }
 
-   .menu-btn .bx-menu {
+  .menu-btn .bx-menu {
     display: block;
   }
   #click:checked ~ .menu-btn .bx-menu {
@@ -53,5 +55,4 @@ html{
     right: 0;
     z-index: 1000;
   }
-
 }
